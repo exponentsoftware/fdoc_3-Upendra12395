@@ -26,11 +26,35 @@ const student = {
     }
 }
 
-student.skills.frontEnd.push({skill : 'Bootstrap', level : 8})
-console.log(student.skills.frontEnd)
-student.skills.backEnd.push({skill : 'Express', level : 9})
-console.log(student.skills.backEnd)
-student.skills.dataBase.push({skill:'SQL', level: 8})
-console.log(student.skills.dataBase)
-student.skills.dataScience.push('SQL')
-console.log(student.skills.dataScience)
+let newStudent = JSON.parse(JSON.stringify(student));
+
+newStudent.skills.frontEnd.push({skill : 'Bootstrap', level : 8})
+newStudent.skills.backEnd.push({skill : 'Express', level : 9})
+newStudent.skills.dataBase.push({skill:'SQL', level: 8})
+newStudent.skills.dataScience.push('SQL')
+console.log(newStudent.skills)
+console.log(student.skills)
+
+// // a. Find the length of student object keys
+let lengthOfObject = Object.keys(newStudent).length;
+ console.log(" Length of values of Student object " +lengthOfObject)
+
+// b. Find the length of the student object values
+console.log("Length of values of Student object " +Object.values(newStudent).length)
+
+// c. Find the length of skills object key
+console.log('Length of key of skills object  ' +Object.keys(newStudent.skills).length)
+
+// d. check if the student object has graphicDesign property
+for (let prop in student) {                          
+    if(prop==="graphicDesign")
+    {
+        console.log("It has graphicDesign proprties")
+    }
+}
+
+
+// e. Iterate the keys of the student object
+for(let key in newStudent){
+    console.log(key)
+}
