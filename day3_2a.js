@@ -65,7 +65,7 @@ function signin(info){
         console.log("User does not exist")
     }else{
         x.isLoggedIn = true
-        console.log(x)
+        //console.log(x)
         console.log("Welcome to the application")
     }
 }
