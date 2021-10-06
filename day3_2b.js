@@ -88,7 +88,7 @@ function averageRating(product){
         sumOfRating+=existProduct.ratings[i].rate;
     }
     let avgRating = sumOfRating/i;
-    console.log(avgRating)
+    console.log(`Average rating of ${product} is ` +avgRating)
 }
 
 averageRating('TV')
